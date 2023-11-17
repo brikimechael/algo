@@ -10,6 +10,7 @@ public class Test {
         fruits.add("Apple");
         fruits.add("Banana");
         fruits.add("Strawberry");
+        // correct way
 /*        Iterator<String> fruitIterator = fruits.iterator();
         while (fruitIterator.hasNext()) {
             String fruit = fruitIterator.next();
@@ -18,21 +19,21 @@ public class Test {
                 fruitIterator.remove();
             }
         }*/
-
-            for (String fruit : fruits) {
+// ConcurrentModificationException
+/*            for (String fruit : fruits) {
                 System.out.println(fruit);
                 if ("Apple".equals(fruit)) {
                     fruits.remove(fruit);
                 }
-            }
+            }*/
 
-/*            for (int i = 0; i < fruits.size(); i++) {
+            for (int i = 0; i < fruits.size(); i++) {
                 System.out.println(fruits.size()+" "+fruits.get(i));
 
                 if ("Apple".equals(fruits.get(i))) {
                     fruits.remove(i);
                 }
-            }*/
+            }
         }
 
 }
