@@ -183,35 +183,14 @@ public class Test {
         return head;
     }
 
-
-    void test(boolean b1,boolean... b2){
-        System.out.println(b2.length);
-    }
-
-    void test(Byte b){
-        System.out.println("Byte");
-    }
-    void test(byte b){
-        System.out.println("byte");
-    }
-    void test(int i){
-        System.out.println("int");
-    }
     public static void main(String[] args) {
 
         Test test = new Test();
-        test.test(true,true,true);
-
-        short k= 5;
-        test.test(k);
         Node head = test.dummyNodeList();
         // Node reversed = test.reverseAndCloneV1(head);
         test.displayList(head);
         //test.removeDuplicates(head);
         System.out.println(test.isPalindrome(head));
-        char a = 'A';
-        a ='B';
-        System.out.println(a);
 
         // test.display();
     }
